@@ -9,7 +9,7 @@ Change the mpv.conf to your own preference, these are a few tweaks I've made to 
 
 ## Change your decoder
 Mine is set to use NVDEC (NVidia Decoder) `hwdec=nvdec`, if you want to use hardware decoder but not sure which one, use `hwdec=auto-safe` (which I have put for this config). As far as I know the old adage is Software Decoder is better than hardware in terms of quality at cost of performance, though I think more modern hardware decoder such as nvdec are virtually as good as software decoder,  and it uses its own separate chip inside the gpu which results in negligible performance loss from both cpu and gpu. It used to that using hardware decoder might result in loss of quality due to poor color management, information loss, etc, but more modern method of hardware decoder have gone better. But if your CPU is capable, you can never be wrong when using software decoder. In the past hardware decoder is used only when your CPU isn't strong enough to do the decoding.
-To use Software Decoder to no `hwdec=no` or just comment out or disable the line, as by default mpv will use software decoder, as it is mentioned in its manual:
+To use Software Decoder, set hwdec to no `hwdec=no` or just comment out or disable the line, as by default mpv will use software decoder, as it is mentioned in its manual:
 
 >In theory, hardware decoding does not reduce video quality (at least for the codecs h264 and HEVC). However, due to restrictions in video output APIs, as well as bugs in the actual hardware decoders, there can be some loss, or even blatantly incorrect results.
 >...
