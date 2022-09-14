@@ -12,7 +12,9 @@ Mine is set to use NVDEC (NVidia Decoder) `hwdec=nvdec`, if you want to use hard
 To use Software Decoder, set hwdec to no `hwdec=no` or just comment out or disable the line, as by default mpv will use software decoder, as it is mentioned in its manual:
 
 >In theory, hardware decoding does not reduce video quality (at least for the codecs h264 and HEVC). However, due to restrictions in video output APIs, as well as bugs in the actual hardware decoders, there can be some loss, or even blatantly incorrect results.
+>
 >...
+>
 >In general, it's very strongly advised to avoid hardware decoding unless absolutely necessary, i.e. if your CPU is insufficient to decode the file in questions. If you run into any weird decoding issues, frame glitches or discoloration, and you have --hwdec turned on, the first thing you should try is disabling it.
 
 P.S.: non-copy method of hardware decoding usually only works in openGL mode (`gpu-api=opengl`), Vulkan also work, however iirc Vulkan is still buggy with mpv.
