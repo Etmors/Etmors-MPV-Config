@@ -42,10 +42,12 @@ If you do not want scroll wheel to change audio volume, and instead use it back 
 I've made it so that subtitle—when the video is played at full screen—will render the subtitle relative to the display size instead of the video resolution height. However this come at a cost, subtitle will scale with window height, meaning in windowed mode, as the window of the player is now following the height of the video (instead of the height of the display when full screen), thus subtitle size become variable when using in windowed mode.
 Most video players out there (MPC, VLC, etc) scale subtitle by video resolution height, which change subtitle size depending on video height. For example when playing a 16:9 video, the subtitle will be larger when full screen-ed compared to video that's using cinemascope ratio 2.40:1. This is caused by the way mpv renders subtitle (probably other video players too).
 According to the manual, this is how the `sub-font-size` is implemented.
+
 > The unit is the size in scaled pixels at a window height of 720. The actual pixel size is scaled with the window height: if the window height is larger or smaller than 720, the actual size of the text increases or decreases as well.
 
-The "scaled pixels" in the first line actually refer to typeface unit "pixel" which is not an arbitrary unit but instead a fixed real physical lenght of 1/96 of an inch. If you set the font size to 36 on a 720p height video, then set the player to play at 100% size, the font height will be 36/96 of an inch.
-In my 108 ppi display, I use font size 36 which after real physical measurement, is 2.54% of my screen height. Which a subtitle X-height target mentioned in this [article](https://www.md-subs.com/saa-subtitle-font-size) by Max Deryagin.
+So far I haven't found reliable calculation, as we don't really know what it is scaled to. Referring it to CSS "pixel" which is 1 pixel in a 96 PPI screen then calculate from there, doesn't seem to match my physical findings. It seems so far that the most reliable method is to just physically measure it by ruler either by software (Windows Snip & Sketch have a ruler, but tedious to use as it have no numbers) or using photoshop where the marquee selection tool have Inch units.
+
+So if you own a 1440p 27 Inch monitor, 36 size correspond to about an estimate of 2.5 % of your screen height.
 
 ## Playback
 I set it to loop the file forever, the loop playlist argument in redundant in this case, but i just left it on.
