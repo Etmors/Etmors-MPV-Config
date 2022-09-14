@@ -29,7 +29,8 @@ Open terminal and type the following:
 
 You can then look at the `dec` column, which will tell decoder utilisation
 
-A more accurate method is by using mpv player log-file function. It will create a log file, akin to using verbose (-v) in command line. I've put the argument in the mpv.conf in General Section, remove the # in front of the argument to uncomment the argument. It will the create log file into logs folder inside your mpv.exe directory. Open this file and look for the sentence `using hardware decoding (nvdec)`^\*\*\* just few couple lines below the lines that tells you It have opened the video file (last line that mention the video file name).
+A more accurate method is by using mpv player log-file function. It will create a log file, akin to using verbose (-v) in command line. I've put the argument in the mpv.conf in General Section, remove the # in front of the argument to uncomment the argument. It will the create log file into logs folder inside your mpv.exe directory. Open this file and look for the sentence `using hardware decoding (nvdec)`^\*\*\*^ just few couple lines below the lines that tells you It have opened the video file (last line that mention the video file name).
+
 \*\*\* or which ever hwdec methods you choose
 
 
