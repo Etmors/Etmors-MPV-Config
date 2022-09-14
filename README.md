@@ -45,7 +45,7 @@ According to the manual, this is how the `sub-font-size` is implemented.
 
 > The unit is the size in scaled pixels at a window height of 720. The actual pixel size is scaled with the window height: if the window height is larger or smaller than 720, the actual size of the text increases or decreases as well.
 
-So far I haven't found reliable calculation, as we don't really know what it is scaled to. Referring it to CSS "pixel" which is 1 pixel in a 96 PPI screen then calculate from there, doesn't seem to match my physical findings. It seems so far that the most reliable method is to just physically measure it by ruler either by software (Windows Snipping tool have a ruler, but tedious to use as it have no numbers) or using photoshop where the marquee selection tool have Inch units.
+So far I haven't found reliable calculation, as we don't really know what it is scaled to. Referring it to CSS "pixel" which is 1 pixel in a 96 PPI screen then calculate from there, doesn't seem to match my physical findings. It seems so far that the most reliable method is to just physically measure it by ruler either by software (Windows Snipping tool have a ruler, but tedious to use as it have no numbers) or using photoshop, paint/paint.net where the marquee selection tool have pixel or Inch units.
 
 So if you own a 1440p 27 Inch monitor, 36 size correspond to about an estimate of 2.5 % of your screen height.
 
