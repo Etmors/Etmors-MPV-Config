@@ -4,6 +4,20 @@ This is a config files for mpv player. MPV player itself have no settings in its
 # How to use
 Put the `portable_config` folder into the the same directory of your mpv.exe, this will overwrite the existing `portable_config`, if you do not use portable mode, config will be located at `%AppData%\mpv\mpv`. Refer to [Files on Windows](https://mpv.io/manual/stable/#files-on-windows) in the mpv manual.
 
+# Linux
+In linux the contents of portable_config is stored in /home/<your username>/.config/mpv
+
+```
+.config
+----|mpv
+---------|mpv.conf
+---------|input.conf
+---------|script-opts
+------------|autoload.conf
+---------|scripts
+------------|autoload.lua
+```
+
 # What to do afterwards?
 Change the mpv.conf to your own preference, these are a few tweaks I've made to mine.
 
